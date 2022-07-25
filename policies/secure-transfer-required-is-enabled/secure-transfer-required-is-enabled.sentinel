@@ -7,7 +7,7 @@ allStorageAccounts = filter tfplan.resource_changes as _, resource_changes {
 			resource_changes.change.actions is ["update"])
 }
 
-print("CIS 3.1: Ensure that 'Secure transfer required' is set to Enabled")
+print("Ensure that 'Secure transfer required' is set to Enabled")
 
 enable_https_traffic_only_is_true = rule {
 	all allStorageAccounts as _, accounts {

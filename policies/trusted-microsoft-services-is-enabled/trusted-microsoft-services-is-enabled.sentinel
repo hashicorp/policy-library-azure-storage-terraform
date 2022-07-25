@@ -7,7 +7,7 @@ allStorageAccounts = filter tfplan.resource_changes as _, resource_changes {
 			resource_changes.change.actions is ["update"])
 }
 
-print("CIS 3.8: Ensure 'Trusted Microsoft Services' is enabled for Storage Account access")
+print("Ensure 'Trusted Microsoft Services' is enabled for Storage Account access")
 
 deny_undefined_network_rules = rule {
 	all allStorageAccounts as _, accounts {

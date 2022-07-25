@@ -7,7 +7,7 @@ allStorageContainers = filter tfplan.resource_changes as _, resource_changes {
 			resource_changes.change.actions is ["update"])
 }
 
-print("CIS 3.6: Ensure that 'Public access level' is set to Private for blob containers")
+print("Ensure that 'Public access level' is set to Private for blob containers")
 
 container_access_type_is_private = rule {
 	all allStorageContainers as _, containers {

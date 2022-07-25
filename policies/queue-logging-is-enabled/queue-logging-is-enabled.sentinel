@@ -7,7 +7,7 @@ allStorageAccounts = filter tfplan.resource_changes as _, resource_changes {
 			resource_changes.change.actions is ["update"])
 }
 
-print("CIS 3.3: Ensure Storage logging is enabled for Queue service for read, write, and delete requests")
+print("Ensure Storage logging is enabled for Queue service for read, write, and delete requests")
 
 deny_undefined_queue_properties = rule {
 	all allStorageAccounts as _, accounts {
