@@ -1,15 +1,15 @@
-policy "azure-storage-secure-transfer-required-is-enabled" {
-  source = "./azure-storage-secure-transfer-required-is-enabled.sentinel"
+policy "secure-transfer-required-is-enabled" {
+  source = "./policies/secure-transfer-required-is-enabled/secure-transfer-required-is-enabled.sentinel"
 }
-policy "azure-storage-default-network-access-rule-set-to-deny" {
-  source = "./azure-storage-default-network-access-rule-set-to-deny.sentinel"
+policy "default-network-access-rule-set-to-deny" {
+  source = "./policies/default-network-access-rule-set-to-deny/default-network-access-rule-set-to-deny.sentinel"
 }
-policy "azure-storage-trusted-microsoft-services-is-enabled" {
-  source = "./azure-storage-trusted-microsoft-services-is-enabled.sentinel"
+policy "trusted-microsoft-services-is-enabled" {
+  source = "./policies/trusted-microsoft-services-is-enabled/trusted-microsoft-services-is-enabled.sentinel"
 }
-policy "azure-storage-blob-public-access-level-set-to-private" {
-  source = "./azure-storage-blob-public-access-level-set-to-private.sentinel"
+policy "blob-public-access-level-set-to-private" {
+  source = "./policies/blob-public-access-level-set-to-private/blob-public-access-level-set-to-private.sentinel"
 }
-policy "azure-storage-queue-logging-is-enabled" {
-  source = "./azure-storage-queue-logging-is-enabled.sentinel"
+policy "queue-logging-is-enabled" {
+  source = "./policies/queue-logging-is-enabled/queue-logging-is-enabled.sentinel"
 }
