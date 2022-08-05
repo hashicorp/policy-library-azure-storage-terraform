@@ -7,8 +7,6 @@ allStorageAccounts = filter tfplan.resource_changes as _, resource_changes {
 			resource_changes.change.actions is ["update"])
 }
 
-print("Ensure 'Trusted Microsoft Services' is enabled for Storage Account access")
-
 deny_undefined_network_rules = rule {
 	all allStorageAccounts as _, accounts {
 		keys(accounts.change.after) contains "network_rules"
@@ -33,6 +31,16 @@ network_rules_default_action_is_deny = rule when deny_undefined_network_rules_by
 	}
 }
 
+// -------------------------------------------------------------
+// Name:        trusted-microsoft-services-is-enabled.sentinel
+// Category:    Data Management
+// Provider:    hashicorp/azurerm
+// Resource:    azurerm_storage_account
+// Check:       network_rules.bypass is "AzureServices"
+// -------------------------------------------------------------
+// Ensure 'Trusted Microsoft Services' is enabled for Storage
+// Account access.
+// -------------------------------------------------------------
 main = rule {
 	deny_undefined_network_rules and
 	deny_undefined_network_rules_bypass and
