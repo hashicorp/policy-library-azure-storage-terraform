@@ -3,7 +3,7 @@ This library, provides prescriptive Terraform policies that can be used to estab
 
 > **NOTE:**
 >
-> This Policy Library is not an exhaustive list of all of possible security configurations and architecture that is available in Microsoft Azure. If you have questions, comments, or have identified ways for us to improve this library, please create [a new GitHub issue](https://github.com/hashicorp/policy-library-azure-compute-terraform/issues/new/choose).
+> This Policy Library is not an exhaustive list of all of possible security configurations and architecture that is available in Microsoft Azure. If you have questions, comments, or have identified ways for us to improve this library, please create [a new GitHub issue](https://github.com/hashicorp/policy-library-azure-storage-terraform/issues/new/choose).
 >
 > Alternatively, We welcome any contributions that improve the quality of this library! To learn more about contributing and suggesting changes to this library, refer to the [contributing guide](CONTRIBUTING.md).
 
