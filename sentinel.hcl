@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 policy "secure-transfer-required-is-enabled" {
   source = "./policies/secure-transfer-required-is-enabled/secure-transfer-required-is-enabled.sentinel"
 }
