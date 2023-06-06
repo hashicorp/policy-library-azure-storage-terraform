@@ -34,18 +34,8 @@ queue_properties_logging_is_enabled = rule when deny_undefined_queue_logging is 
 	}
 }
 
-// -------------------------------------------------------------
-// Name:        queue-logging-is-enabled.sentinel
-// Category:    Data Management
-// Provider:    hashicorp/azurerm
-// Resource:    azurerm_storage_account
-// Check:       queue_properties.logging.delete is true
-//              queue_properties.logging.read is true
-//              queue_properties.logging.write is true
-// -------------------------------------------------------------
 // Ensure Storage logging is enabled for Queue service for READ,
 // WRITE, and DELETE requests.
-// -------------------------------------------------------------
 main = rule {
 	deny_undefined_queue_properties and
 	deny_undefined_queue_logging and

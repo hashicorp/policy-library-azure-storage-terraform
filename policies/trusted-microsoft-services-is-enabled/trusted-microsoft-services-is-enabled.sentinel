@@ -31,16 +31,8 @@ network_rules_default_action_is_deny = rule when deny_undefined_network_rules_by
 	}
 }
 
-// -------------------------------------------------------------
-// Name:        trusted-microsoft-services-is-enabled.sentinel
-// Category:    Data Management
-// Provider:    hashicorp/azurerm
-// Resource:    azurerm_storage_account
-// Check:       network_rules.bypass is "AzureServices"
-// -------------------------------------------------------------
 // Ensure 'Trusted Microsoft Services' is enabled for Storage
 // Account access.
-// -------------------------------------------------------------
 main = rule {
 	deny_undefined_network_rules and
 	deny_undefined_network_rules_bypass and

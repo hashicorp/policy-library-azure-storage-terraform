@@ -10,19 +10,23 @@ Turning on firewall rules for storage account will block access to incoming requ
 ## Policy Result (Pass)
 ```shell
 trace:
-      trusted-microsoft-services-is-enabled.sentinel:44:1 - Rule "main"
+      trusted-microsoft-services-is-enabled.sentinel:36:1 - Rule "main"
         Description:
-          -------------------------------------------------------------
-          Name:        trusted-microsoft-services-is-enabled.sentinel
-          Category:    Data Management
-          Provider:    hashicorp/azurerm
-          Resource:    azurerm_storage_account
-          Check:       network_rules.bypass is "AzureServices"
-          -------------------------------------------------------------
           Ensure 'Trusted Microsoft Services' is enabled for Storage
           Account access.
-          -------------------------------------------------------------
 
+        Value:
+          true
+
+      trusted-microsoft-services-is-enabled.sentinel:10:1 - Rule "deny_undefined_network_rules"
+        Value:
+          true
+
+      trusted-microsoft-services-is-enabled.sentinel:16:1 - Rule "deny_undefined_network_rules_bypass"
+        Value:
+          true
+
+      trusted-microsoft-services-is-enabled.sentinel:24:1 - Rule "network_rules_default_action_is_deny"
         Value:
           true
 ```
