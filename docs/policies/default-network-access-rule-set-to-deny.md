@@ -10,27 +10,19 @@ Storage accounts should be configured to deny access to traffic from all network
 ## Policy Result (Pass)
 ```shell
 trace:
-      default-network-access-rule-set-to-deny.sentinel:35:1 - Rule "main"
+      default-network-access-rule-set-to-deny.sentinel:26:1 - Rule "main"
         Description:
-          -------------------------------------------------------------
-          Name:        default-network-access-rule-set-to-deny.sentinel
-          Category:    Data Management
-          Provider:    hashicorp/azurerm
-          Resource:    azurerm_storage_account
-          Check:       network_rules.default_action is "Deny"
-          -------------------------------------------------------------
           Ensure default network access rule for Storage Accounts is
           set to deny.
-          -------------------------------------------------------------
 
         Value:
           true
 
-      default-network-access-rule-set-to-deny.sentinel:11:1 - Rule "deny_undefined_network_rules"
+      default-network-access-rule-set-to-deny.sentinel:10:1 - Rule "deny_undefined_network_rules"
         Value:
           true
 
-      default-network-access-rule-set-to-deny.sentinel:17:1 - Rule "network_rules_default_action_is_deny"
+      default-network-access-rule-set-to-deny.sentinel:16:1 - Rule "network_rules_default_action_is_deny"
         Value:
           true
 ```

@@ -21,16 +21,8 @@ network_rules_default_action_is_deny = rule when deny_undefined_network_rules is
 	}
 }
 
-// -------------------------------------------------------------
-// Name:        default-network-access-rule-set-to-deny.sentinel
-// Category:    Data Management
-// Provider:    hashicorp/azurerm
-// Resource:    azurerm_storage_account
-// Check:       network_rules.default_action is "Deny"
-// -------------------------------------------------------------
 // Ensure default network access rule for Storage Accounts is
 // set to deny.
-// -------------------------------------------------------------
 main = rule {
 	deny_undefined_network_rules and
 	network_rules_default_action_is_deny
