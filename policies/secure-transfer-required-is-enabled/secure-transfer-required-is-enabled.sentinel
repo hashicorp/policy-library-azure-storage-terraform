@@ -10,14 +10,14 @@ allStorageAccounts = filter tfplan.resource_changes as _, resource_changes {
 enable_https_traffic_only_is_true = rule {
 	all allStorageAccounts as _, accounts {
 		accounts.change.after.enable_https_traffic_only is not defined or
-		    accounts.change.after.enable_https_traffic_only is true
+			accounts.change.after.enable_https_traffic_only is true
 	}
 }
 
 https_traffic_only_is_true = rule {
 	all allStorageAccounts as _, accounts {
 		accounts.change.after.https_traffic_only_enabled is not defined or
-		    accounts.change.after.https_traffic_only_enabled is true
+			accounts.change.after.https_traffic_only_enabled is true
 	}
 }
 
