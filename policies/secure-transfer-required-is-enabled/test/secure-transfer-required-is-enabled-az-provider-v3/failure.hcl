@@ -3,12 +3,12 @@
 
 mock "tfplan/v2" {
   module {
-    source = "../../testdata/mock-tfplan-success.sentinel"
+    source = "../../testdata/mock-tfplan-failure-az-provider-v3.sentinel"
   }
 }
 
 test {
   rules = {
-    main = true
+    main = false
   }
 }
